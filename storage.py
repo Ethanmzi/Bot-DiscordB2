@@ -1,6 +1,3 @@
-# storage.py
-# Gestion de la sauvegarde JSON + données globales du bot
-
 import json
 import os
 
@@ -30,7 +27,6 @@ class Storage:
             "Tu es plutôt débutant ou déjà à l'aise ? (réponds: debutant / avance)"
         )
 
-        # Débutant
         debutant = TreeNode(
             "debutant",
             "Tu préfères faire quoi au début ? (web / script)"
@@ -46,7 +42,6 @@ class Storage:
         debutant.add_child(debutant_web)
         debutant.add_child(debutant_script)
 
-        # Avancé
         avance = TreeNode(
             "avance",
             "Tu veux te diriger vers quoi ? (mobile / backend / data)"

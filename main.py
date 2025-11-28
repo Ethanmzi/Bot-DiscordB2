@@ -1,5 +1,3 @@
-# main.py
-
 import asyncio
 import os
 import time
@@ -9,7 +7,7 @@ from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
 from storage import Storage
-from storage import DATA_FILE  # juste pour info
+from storage import DATA_FILE
 
 # Chargement des variables d'environnement
 load_dotenv()
@@ -59,7 +57,7 @@ async def main():
         await bot.load_extension("cogs.dialog")
         await bot.load_extension("cogs.extra")
 
-        TOKEN = os.getenv("DISCORD_TOKEN")
+        TOKEN = os.getenv("DISCORD_TOKEN_ICI")
         if not TOKEN:
             raise ValueError("DISCORD_TOKEN non trouvé dans les variables d'environnement")
         await bot.start(TOKEN)
